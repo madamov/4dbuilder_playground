@@ -1,0 +1,1 @@
+{"success":false,"errors":[{"message":"Syntax error","isError":true,"code":{"type":"projectMethod","methodName":"methodWithSyntaxError","path":"methodWithSyntaxError","file":"[object File]"},"line":3,"lineInFile":4}]}
