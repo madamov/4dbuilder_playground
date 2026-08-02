@@ -14,11 +14,15 @@ Function checkSyntax($checkSyntaxOptions : Object; $exportErrorsTo : Text)->$sta
 	
 	$checkSyntaxOptions.targets:=$checkSyntaxOptions.targets || New collection()  // to chekc syntax, we pass empty colelction of targets
 	
+	LOG EVENT(Into system standard outputs; "checking syntax\n")
+	
 	$status:=Compile project($checkSyntaxOptions)
 	
 	// Compiler project doesn't creates error log XML file unlike when checking syntax through menus
 	
 	If (Not($status.success))
+		
+		LOG EVENT(Into system standard outputs; "checking syntax FAILED\n")
 		
 		If ($exportErrorsTo="")
 			$errorLog:=Folder(fk logs folder).file(This.getProjectName()+"_errors.json")
