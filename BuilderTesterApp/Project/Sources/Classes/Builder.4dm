@@ -1,4 +1,4 @@
-Class constructor($options : Object)
+Class constructor
 	
 	var $startupParam : Text  // JSON user parameters
 	var $getDBParValue : Real
@@ -40,6 +40,7 @@ Function checkSyntax($checkSyntaxOptions : Object; $exportErrorsTo : Text)->$sta
 	$status:=Compile project($checkSyntaxOptions)
 	
 	// Compiler project doesn't create error log XML file unlike when checking syntax through menus
+	// so we will dump resulting JSON if there is error
 	
 	If (Not($status.success))
 		
