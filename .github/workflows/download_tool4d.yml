@@ -7,8 +7,8 @@ jobs:
   prepare-tool4d_2008-macos:
     uses: madamov/4d_actions/.github/workflows/get_tool4d.yml@main
     with:
-    version: "20.8 HF3"
-    runner: "macos-latest"
+      version: "20.8 HF3"
+      runner: "macos-latest"
 
   prepare-tool4d_2101-macos:
       uses: madamov/4d_actions/.github/workflows/get_tool4d.yml@main
