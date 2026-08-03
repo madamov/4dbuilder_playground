@@ -4,17 +4,13 @@ on:
   workflow_dispatch:
 
 jobs:
-  prepare-tool4d-macos:
+  prepare-tool4d_2008-macos:
+    uses: madamov/4d_actions/.github/workflows/get_tool4d.yml@main
+    with:
+    version: "20.8 HF3"
+    runner: "macos-latest"
 
-    steps:
-
-    - name: Cache macos ARM 20.8 LTS
-      uses: madamov/4d_actions/.github/workflows/get_tool4d.yml@main
-      with:
-        version: "20.8 HF3"
-        runner: "macos-latest"
-
-    - name: Cache macos ARM 21.1 LTS
+  prepare-tool4d_2101-macos:
       uses: madamov/4d_actions/.github/workflows/get_tool4d.yml@main
       with:
         version: "21.1"
