@@ -5,7 +5,17 @@ on:
 
 jobs:
   prepare-tool4d-macos:
-    uses: madamov/4d_actions/.github/workflows/get_tool4d.yml@main
-    with:
-      version: "20.8 HF3"
-      runner: "macos-latest"
+
+    steps:
+
+    - name: Cache macos ARM 20.8 LTS
+      uses: madamov/4d_actions/.github/workflows/get_tool4d.yml@main
+      with:
+        version: "20.8 HF3"
+        runner: "macos-latest"
+
+    - name: Cache macos ARM 21.1 LTS
+      uses: madamov/4d_actions/.github/workflows/get_tool4d.yml@main
+      with:
+        version: "21.1"
+        runner: "macos-latest"
