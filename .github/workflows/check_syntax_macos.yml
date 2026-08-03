@@ -1,0 +1,13 @@
+name: Check 4D syntax
+
+on:
+  workflow_dispatch:
+
+jobs:
+  check-syntax:
+    uses: madamov/4d_actions/.github/workflows/check_4d_syntax.yml@main
+    with:
+      runner: "macos-latest"
+      startup_method: "checkSyntax"
+      user_parameters: {"errorFolderPath":"__WORKSPACE__"}
+      
