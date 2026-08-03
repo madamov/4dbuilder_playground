@@ -5,16 +5,30 @@ var $inHeadless : Boolean
 var $startupParam : Text  // JSON user parameters
 var $errorFolder : 4D.Folder
 
-$inHeadless:=Get application info.headless
 
 $options:=New object
 $options.action:="checksyntax"
 
 $builder:=cs.Builder.new($options)
 
+$inHeadless:=Get application info.headless
+
 If ($inHeadless)
 	
+	
 	LOG EVENT(Into system standard outputs; "in headless\n")
+	
+	If (Length(Data file)>0)
+		LOG EVENT(Into system standard outputs; "running with data file\n")
+	Else 
+		LOG EVENT(Into system standard outputs; "running with --dataless\n")
+	End if 
+	
+	//If (Folder(fk data folder).exists)
+	//LOG EVENT(Into system standard outputs; "data folder exists at "+Folder(fk data folder).platformPath+"\n")
+	//Else 
+	//LOG EVENT(Into system standard outputs; "data folder doesn't exist\n")
+	//End if 
 	
 	$getDBParValue:=Get database parameter(User param value; $startupParam)
 	
@@ -49,3 +63,4 @@ Else
 End if 
 
 $status:=$builder.checkSyntax(New object(); $errorFolder.platformPath)
+
