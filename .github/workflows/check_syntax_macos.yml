@@ -9,5 +9,5 @@ jobs:
     with:
       runner: "macos-latest"
       startup_method: "checkSyntax"
-      user_parameters: {"errorFolderPath":"__WORKSPACE__"}
+      user_parameters: '{"errorFolderPath":"__DOCUMENTS__"}'
       
