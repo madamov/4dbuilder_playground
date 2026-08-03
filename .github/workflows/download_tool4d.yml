@@ -1,5 +1,9 @@
+name: Cache tool4d
+on:
+  workflow_dispatch:
+
 jobs:
-  prepare-tool4d:
+  prepare-tool4d-macos:
     uses: https://github.com/madamov/4d_actions/.github/workflows/download_tool4d.yml
     with:
       version: "20.8 HF3"
