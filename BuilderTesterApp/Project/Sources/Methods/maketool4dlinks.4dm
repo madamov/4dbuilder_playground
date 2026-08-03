@@ -70,4 +70,4 @@ $oneLink.os:="win"
 $oneLink.target:="x86_64"
 $links.push($oneLink)
 
-SET TEXT TO PASTEBOARD(JSON Stringify($links))
+SET TEXT TO PASTEBOARD(JSON Stringify($links; *))
