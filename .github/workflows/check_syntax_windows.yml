@@ -1,0 +1,33 @@
+name: Check 4D syntax on Windows
+
+on:
+  workflow_dispatch:
+
+jobs:
+  check-syntax:
+    uses: madamov/4d_actions/.github/workflows/check_4d_syntax.yml@main
+    with:
+      runner: "windows-latest"
+      startup_method: "checkSyntax"
+      user_parameters: '{"errorFolderPath":"__DOCUMENTS__"}'
+
+  verify-syntax:
+    name: Verify syntax result
+    needs: check-syntax
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Fail when syntax check failed
+        if: needs.check-syntax.outputs.success != 'true'
+        env:
+          SUCCESS: ${{ needs.check-syntax.outputs.success }}
+          ERROR_FILE: ${{ needs.check-syntax.outputs.error_file }}
+        run: |
+          echo "::error::4D syntax check reported success=$SUCCESS"
+          echo "::error::Result file on the tool4d runner: $ERROR_FILE"
+          exit 1
+
+      - name: Syntax check succeeded
+        if: needs.check-syntax.outputs.success == 'true'
+        run: |
+          echo "4D syntax check succeeded."
