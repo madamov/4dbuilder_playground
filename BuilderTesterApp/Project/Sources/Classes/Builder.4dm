@@ -11,7 +11,11 @@ Class constructor
 		If ($startupParam#"")
 			This._userParams:=JSON Parse($startupParam)
 			If (This._userParams.errorFolderPath#Null) && (This._userParams.errorFolderPath#"")
-				This._errorFolder:=Folder(This._userParams.errorFolderPath; fk posix path)
+				If (Is Windows)
+					This._errorFolder:=Folder(This._userParams.errorFolderPath; fk platform path)
+				Else 
+					This._errorFolder:=Folder(This._userParams.errorFolderPath; fk posix path)
+				End if 
 				LOG EVENT(Into system standard outputs; "custom error folder detected\n")
 				LOG EVENT(Into system standard outputs; "Set to:"+This._errorFolder.platformPath+"\n")
 			Else 
