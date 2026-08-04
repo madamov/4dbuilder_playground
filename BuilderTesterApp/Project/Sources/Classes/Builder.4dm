@@ -46,11 +46,16 @@ Function checkSyntax($checkSyntaxOptions : Object; $exportErrorsTo : Text)->$sta
 		
 		LOG EVENT(Into system standard outputs; "checking syntax FAILED\n")
 		
-		$errorLog:=This.getErrorFolder().file(This.getProjectName()+"_errors.json")
+	Else 
 		
-		$fileStatus:=$errorLog.create()
-		$fileStatus:=$errorLog.setText(JSON Stringify($status))
+		LOG EVENT(Into system standard outputs; "checking syntax OK\n")
 		
 	End if 
 	
+	// always create log
+	
+	$errorLog:=This.getErrorFolder().file(This.getProjectName()+"_errors.json")
+	
+	$fileStatus:=$errorLog.create()
+	$fileStatus:=$errorLog.setText(JSON Stringify($status))
 	
