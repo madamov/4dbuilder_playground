@@ -1,0 +1,14 @@
+{
+	"Builder": {
+		"functions": {
+			"getProjectName": 2147483636,
+			"getErrorFolder": 2147483635,
+			"getUserParams": 2147483628,
+			"run": 2147483630,
+			"checkSyntax": 2147483634,
+			"compile": 2147483633,
+			"build": 2147483632
+		},
+		"constructorID": 2147483637
+	}
+}

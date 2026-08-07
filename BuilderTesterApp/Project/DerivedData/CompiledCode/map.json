@@ -1,0 +1,172 @@
+{
+	"map": [
+		{
+			"id": 2147483647,
+			"path": "Sources/Methods/build.4dm"
+		},
+		{
+			"id": 2147483646,
+			"path": "Sources/Methods/compile.4dm"
+		},
+		{
+			"id": 2147483645,
+			"path": "Sources/Methods/maketool4dlinks.4dm"
+		},
+		{
+			"id": 2147483644,
+			"path": "Sources/Methods/menuAbout.4dm",
+			"parameters": [
+				{
+					"parameterName": "",
+					"parameterType": 0
+				},
+				{
+					"parameterName": "fromMenu",
+					"parameterType": 305
+				}
+			]
+		},
+		{
+			"id": 2147483643,
+			"path": "Sources/Methods/methodWithSyntaxError.4dm"
+		},
+		{
+			"id": 2147483642,
+			"path": "Sources/Methods/checkSyntax.4dm"
+		},
+		{
+			"id": 2147483641,
+			"path": "Sources/Methods/testCheckSyntax.4dm"
+		},
+		{
+			"id": 2147483640,
+			"path": "Sources/Methods/Compiler_Methods.4dm"
+		},
+		{
+			"id": 2147483639,
+			"path": "Sources/Methods/openAboutDialog.4dm"
+		},
+		{
+			"id": 2147483638,
+			"path": "Sources/Classes/Builder.4dm"
+		},
+		{
+			"id": 2147483637,
+			"path": "Sources/Classes/Builder.4dm",
+			"function": "#",
+			"parameters": [
+				{
+					"parameterName": "",
+					"parameterType": 0
+				},
+				{
+					"parameterName": "quitInHeadless",
+					"parameterType": 305
+				}
+			]
+		},
+		{
+			"id": 2147483636,
+			"path": "Sources/Classes/Builder.4dm",
+			"function": "getProjectName",
+			"parameters": [
+				{
+					"parameterName": "",
+					"parameterType": 284
+				}
+			]
+		},
+		{
+			"id": 2147483635,
+			"path": "Sources/Classes/Builder.4dm",
+			"function": "getErrorFolder",
+			"parameters": [
+				{
+					"parameterName": "",
+					"parameterType": 1709
+				}
+			]
+		},
+		{
+			"id": 2147483634,
+			"path": "Sources/Classes/Builder.4dm",
+			"function": "checkSyntax",
+			"parameters": [
+				{
+					"parameterName": "status",
+					"parameterType": 1216
+				}
+			]
+		},
+		{
+			"id": 2147483633,
+			"path": "Sources/Classes/Builder.4dm",
+			"function": "compile",
+			"parameters": [
+				{
+					"parameterName": "",
+					"parameterType": 1216
+				},
+				{
+					"parameterName": "compileOptions",
+					"parameterType": 1216
+				}
+			]
+		},
+		{
+			"id": 2147483632,
+			"path": "Sources/Classes/Builder.4dm",
+			"function": "build",
+			"parameters": [
+				{
+					"parameterName": "",
+					"parameterType": 1216
+				},
+				{
+					"parameterName": "settingsPOSIXFilePath",
+					"parameterType": 284
+				}
+			]
+		},
+		{
+			"id": 2147483631,
+			"path": "Sources/DatabaseMethods/onStartup.4dm"
+		},
+		{
+			"id": 2147483630,
+			"path": "Sources/Classes/Builder.4dm",
+			"function": "run",
+			"parameters": [
+				{
+					"parameterName": "",
+					"parameterType": 1216
+				},
+				{
+					"parameterName": "whatToDo",
+					"parameterType": 1216
+				}
+			]
+		},
+		{
+			"id": 2147483629,
+			"path": "Sources/Classes/Builder.4dm",
+			"function": "get"
+		},
+		{
+			"id": 2147483628,
+			"path": "Sources/Classes/Builder.4dm",
+			"function": "getUserParams",
+			"parameters": [
+				{
+					"parameterName": "",
+					"parameterType": 1216
+				}
+			]
+		}
+	],
+	"targets": {
+		"x86_64_generic": true,
+		"arm64_macOS_lib": true
+	},
+	"arch64": true
+}

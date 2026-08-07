@@ -1,4 +1,4 @@
 //%attributes = {}
 var $test : Object
 
-$test=New object
+$test:=New object

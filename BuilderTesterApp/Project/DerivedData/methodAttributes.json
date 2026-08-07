@@ -1,19 +1,31 @@
 {
 	"methods": {
+		"build": {
+			"timeStamp": "2026-08-05T08:37:01Z"
+		},
+		"compile": {
+			"timeStamp": "2026-08-05T08:39:20Z"
+		},
 		"maketool4dlinks": {
 			"timeStamp": "2026-08-03T13:44:21Z"
 		},
 		"menuAbout": {
-			"timeStamp": "2026-08-02T13:40:38Z"
+			"timeStamp": "2026-08-04T19:04:22Z"
 		},
 		"methodWithSyntaxError": {
-			"timeStamp": "2026-08-02T14:28:43Z"
+			"timeStamp": "2026-08-04T19:04:19Z"
 		},
 		"checkSyntax": {
-			"timeStamp": "2026-08-03T20:22:17Z"
+			"timeStamp": "2026-08-05T08:38:52Z"
 		},
 		"testCheckSyntax": {
 			"timeStamp": "2026-08-02T15:09:07Z"
+		},
+		"Compiler_Methods": {
+			"timeStamp": "2026-08-04T19:04:25Z",
+			"attributes": {
+				"invisible": true
+			}
 		},
 		"openAboutDialog": {
 			"timeStamp": "2026-08-02T13:37:45Z"
