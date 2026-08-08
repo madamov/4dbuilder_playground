@@ -5,25 +5,25 @@ on:
 
 jobs:
   prepare-tool4d_2008-macos:
-    uses: madamov/4d_actions/.github/workflows/get_tool4d.yml@main
+    uses: madamov/4d_actions/.github/workflows/get_tool4d.yml@v1
     with:
       version: "20.8"
       runner: "macos-latest"
 
   prepare-tool4d_2101-macos:
-      uses: madamov/4d_actions/.github/workflows/get_tool4d.yml@main
+      uses: madamov/4d_actions/.github/workflows/get_tool4d.yml@v1
       with:
         version: "21.1"
         runner: "macos-latest"
 
   prepare-tool4d_2008-windows:
-    uses: madamov/4d_actions/.github/workflows/get_tool4d.yml@main
+    uses: madamov/4d_actions/.github/workflows/get_tool4d.yml@v1
     with:
       version: "20.8"
       runner: "windows-latest"
 
   prepare-tool4d_2101-windows:
-      uses: madamov/4d_actions/.github/workflows/get_tool4d.yml@main
+      uses: madamov/4d_actions/.github/workflows/get_tool4d.yml@v1
       with:
         version: "21.1"
         runner: "windows-latest"

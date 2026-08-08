@@ -5,7 +5,7 @@ on:
 
 jobs:
   check-syntax:
-    uses: madamov/4d_actions/.github/workflows/check_4d_syntax.yml@main
+    uses: madamov/4d_actions/.github/workflows/check_4d_syntax.yml@v1
     with:
       runner: "macos-latest"
       startup_method: "checkSyntax"
