@@ -28,7 +28,6 @@ Example:
 
 -   `check_syntax_windows.yml`
 -   `check_syntax_macos.yml`
--   `check_syntax_linux.yml` (when available)
 
 The Windows example calls the reusable workflow:
 
