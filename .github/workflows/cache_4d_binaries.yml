@@ -1,0 +1,33 @@
+name: Test 4D installer cache
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "4D version to download, install, and cache"
+        required: true
+        type: choice
+        options:
+          - "20.8"
+          - "20.8 HF3"
+          - "20.8 HF4"
+          - "21.1"
+          - "21 R3"
+        default: "20.8"
+      downloader_version:
+        description: "4D Downloader release tag (leave empty for latest)"
+        required: false
+        type: string
+        default: ""
+
+jobs:
+  cache-4d-binaries:
+    name: Download, install, and cache 4D
+    uses: madamov/4d_actions/.github/workflows/get_cache_4d_binaries.yml@2-create-reusable-workflow-to-cache-particular-version-and-build-of-4d
+    with:
+      version: ${{ inputs.version }}
+      downloader_version: ${{ inputs.downloader_version }}
+    secrets:
+      PRODUCT_DOWNLOAD_USERNAME: ${{ secrets.PRODUCT_DOWNLOAD_USERNAME }}
+      PRODUCT_DOWNLOAD_PASSWORD: ${{ secrets.PRODUCT_DOWNLOAD_PASSWORD }}
+      DOWNLOADER_TOKEN: ${{ secrets.DOWNLOADER_TOKEN }}
