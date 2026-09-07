@@ -19,7 +19,11 @@ on:
         required: false
         type: string
         default: ""
-
+      sftp_url:
+        description: "URL to SFTP server where to upload installed binaries"
+        required: false
+        type: string
+        default: ""
 jobs:
   cache-4d-binaries:
     name: Download, install, and cache 4D
@@ -27,7 +31,10 @@ jobs:
     with:
       version: ${{ inputs.version }}
       downloader_version: ${{ inputs.downloader_version }}
+      sftp_url: ${{ inputs.sftp_url }}
     secrets:
       PRODUCT_DOWNLOAD_USERNAME: ${{ secrets.PRODUCT_DOWNLOAD_USERNAME }}
       PRODUCT_DOWNLOAD_PASSWORD: ${{ secrets.PRODUCT_DOWNLOAD_PASSWORD }}
       DOWNLOADER_TOKEN: ${{ secrets.DOWNLOADER_TOKEN }}
+      SFTP_USERNAME: ${{ secrets.SFTP_USERNAME }}
+      SFTP_PASSWORD: ${{ secrets.SFTP_PASSWORD }}
