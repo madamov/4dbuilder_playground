@@ -1,4 +1,4 @@
-name: Test 4D installer cache
+name: Cache and upload 4D binaries
 
 on:
   workflow_dispatch:
