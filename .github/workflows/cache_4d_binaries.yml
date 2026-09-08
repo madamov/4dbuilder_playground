@@ -38,3 +38,4 @@ jobs:
       DOWNLOADER_TOKEN: ${{ secrets.DOWNLOADER_TOKEN }}
       SFTP_USERNAME: ${{ secrets.SFTP_USERNAME }}
       SFTP_PASSWORD: ${{ secrets.SFTP_PASSWORD }}
+      SFTP_HOST_FINGERPRINT: ${{ secrets.SFTP_FINGERPRINT }}
