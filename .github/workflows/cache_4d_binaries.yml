@@ -27,7 +27,7 @@ on:
 jobs:
   cache-4d-binaries:
     name: Download, install, and cache 4D
-    uses: madamov/4d_actions/.github/workflows/get_cache_4d_binaries.yml@2-create-reusable-workflow-to-cache-particular-version-and-build-of-4d
+    uses: madamov/4d_actions/.github/workflows/get_cache_4d_binaries.yml@v1
     with:
       version: ${{ inputs.version }}
       downloader_version: ${{ inputs.downloader_version }}
