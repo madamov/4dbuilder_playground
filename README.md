@@ -104,6 +104,8 @@ selected 4D version. Its manual-dispatch inputs are:
 | `downloader_version` | Optional 4D Downloader release tag; an empty value selects the latest release. |
 | `sftp_url` | Optional destination URL for uploading the installed binaries over SFTP. |
 
+4D Downloader is application written using Objo Studio with the purpose to download 4D installers from product-download.4d.com. 
+
 The caller forwards the following repository secrets to the reusable
 workflow:
 
