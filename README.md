@@ -120,7 +120,6 @@ The caller forwards the following repository secrets to the reusable workflow:
 
 -   `PRODUCT_DOWNLOAD_USERNAME` and `PRODUCT_DOWNLOAD_PASSWORD` for
     authenticated 4D product downloads
--   `DOWNLOADER_TOKEN` for obtaining the downloader
 -   `SFTP_USERNAME`, `SFTP_PASSWORD`, and `SFTP_FINGERPRINT` for the
     optional SFTP upload (`SFTP_FINGERPRINT` is passed as
     `SFTP_HOST_FINGERPRINT`)
