@@ -104,7 +104,17 @@ selected 4D version. Its manual-dispatch inputs are:
 | `downloader_version` | Optional 4D Downloader release tag; an empty value selects the latest release. |
 | `sftp_url` | Optional destination URL for uploading the installed binaries over SFTP. |
 
-[4D Downloader](https://github.com/madamov/4D-Downloader) is application written using Objo Studio with the purpose to download 4D installers (dmg and zip files) from [4D Products download site](https://product-download.4d.com). 4D Products Download site requires username and password to login and has restrictions what you can download with your credentials. For example, if you are not 4D Partner you can't download Hotfixes or R versions, but you can download LTS versions. tool4d can be downloaded without credentials using curl command. But, in order to download anything else curl will not work, so 4D Downloader uses an HTMLViewer object (in 4D world, we have WebArea object, HTMLViewer is very similar to it).
+[4D Downloader](https://github.com/madamov/4D-Downloader) is an
+application built with Objo Studio that downloads 4D installers, including
+DMG and ZIP packages, from the
+[4D product download site](https://product-download.4d.com). Access to that
+site requires a username and password, and the available downloads depend
+on the account's entitlements. For example, users without 4D Partner access
+can download LTS releases, but not hotfixes or R releases. Although tool4d
+can be downloaded without authentication by using `curl`, other 4D products
+require an authenticated browser session. To support this process, 4D
+Downloader uses an `HTMLViewer` control, which is comparable to the Web Area
+object in 4D.
 
 The caller forwards the following repository secrets to the reusable workflow:
 
