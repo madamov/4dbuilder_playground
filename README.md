@@ -104,10 +104,9 @@ selected 4D version. Its manual-dispatch inputs are:
 | `downloader_version` | Optional 4D Downloader release tag; an empty value selects the latest release. |
 | `sftp_url` | Optional destination URL for uploading the installed binaries over SFTP. |
 
-4D Downloader is application written using Objo Studio with the purpose to download 4D installers from product-download.4d.com. 
+[4D Downloader](https://github.com/madamov/4D-Downloader) is application written using Objo Studio with the purpose to download 4D installers (dmg and zip files) from [4D Products download site](https://product-download.4d.com). 4D Products Download site requires username and password to login and has restrictions what you can download with your credentials. For example, if you are not 4D Partner you can't download Hotfixes or R versions, but you can download LTS versions. tool4d can be downloaded without credentials using curl command. But, in order to download anything else curl will not work, so 4D Downloader uses an HTMLViewer object (in 4D world, we have WebArea object, HTMLViewer is very similar to it).
 
-The caller forwards the following repository secrets to the reusable
-workflow:
+The caller forwards the following repository secrets to the reusable workflow:
 
 -   `PRODUCT_DOWNLOAD_USERNAME` and `PRODUCT_DOWNLOAD_PASSWORD` for
     authenticated 4D product downloads
@@ -122,8 +121,7 @@ These examples require the reusable workflows from:
 
 -   `madamov/4d_actions`
 
-Depending on the workflow being tested, additional repository variables
-or secrets may be required.
+Depending on the workflow being tested, additional repository variables or secrets may be required.
 
 ## Repository structure
 
@@ -136,8 +134,7 @@ or secrets may be required.
     └── download_tool4d.yml
 ```
 
-Additional workflow examples will be added as new reusable workflows
-become available.
+Additional workflow examples will be added as new reusable workflows become available.
 
 ## Related repository
 
