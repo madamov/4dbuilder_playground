@@ -1,7 +1,7 @@
 # 4D Builder Playground
 
 This repository contains example projects and test workflows used to
-develop and validate reusable GitHub Actions from the **4d_actions**
+develop and validate reusable GitHub Actions from the **madamov/4d_actions**
 repository.
 
 It serves as a playground for experimenting with automated 4D
