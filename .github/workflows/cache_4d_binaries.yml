@@ -12,6 +12,7 @@ on:
           - "20.8 HF3"
           - "20.8 HF4"
           - "21.1"
+          - "21.2"
           - "21 R3"
         default: "20.8"
       downloader_version:
